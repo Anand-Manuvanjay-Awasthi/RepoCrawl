@@ -4,13 +4,16 @@ pydantic>=2.8.0
 pydantic-settings>=2.4.0
 python-dotenv>=1.0.1
 
-# RAG / LLM stack (used starting Phase 3 / 6)
-langchain>=0.3.0
-langchain-community>=0.3.0
-langgraph>=0.2.0
+# Vector store (Phase 3+)
 chromadb>=0.5.0
-sentence-transformers>=3.0.0
+
+# Embeddings + LLM via Hugging Face Inference API (Phase 3 / Phase 6) —
+# no local torch/sentence-transformers runtime needed, keeping the backend
+# lightweight; models run remotely on Hugging Face's infrastructure.
 huggingface-hub>=0.24.0
+
+# LangGraph orchestration for the RAG generation flow (Phase 6)
+langgraph>=0.2.0
 
 # Repository ingestion (used starting Phase 2)
 GitPython>=3.1.43

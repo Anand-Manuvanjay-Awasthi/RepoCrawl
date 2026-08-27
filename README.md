@@ -32,7 +32,7 @@ RepoCrawl/
       frontend skeleton)
 - [x] Phase 2 — Repository ingestion (URL validation, metadata lookup,
       cloning, loading, filtering)
-- [ ] Phase 3 — Indexing pipeline (chunking, embeddings, ChromaDB)
+- [x] Phase 3 — Indexing pipeline (chunking, embeddings, ChromaDB)
 - [ ] Phase 4 — Repository intelligence (tech stack, repo map, suggestions)
 - [ ] Phase 5 — Retrieval + intent classification
 - [ ] Phase 6 — RAG generation (`/api/chat`)
