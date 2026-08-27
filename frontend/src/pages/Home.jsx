@@ -34,7 +34,7 @@ function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-[#0b0d12] px-6 text-center">
-      <h1 className="text-3xl font-semibold tracking-tight text-white">RepoLens</h1>
+      <h1 className="text-3xl font-semibold tracking-tight text-white">RepoCrawl</h1>
       <p className="max-w-md text-sm text-slate-400">
         Project foundation is up. The landing page and workspace UI arrive in a later phase.
       </p>

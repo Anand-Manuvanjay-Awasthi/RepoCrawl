@@ -26,7 +26,7 @@ export function toApiError(error) {
   if (error?.request) {
     return {
       code: 'network_error',
-      message: 'Could not reach the RepoLens backend. Is it running?',
+      message: 'Could not reach the RepoCrawl backend. Is it running?',
       context: null,
       status: null,
     }

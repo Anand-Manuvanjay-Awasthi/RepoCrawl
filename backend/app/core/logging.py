@@ -1,5 +1,5 @@
 """
-Logging configuration for RepoLens.
+Logging configuration for RepoCrawl.
 
 Keeps logging setup centralized so every module can just do:
 

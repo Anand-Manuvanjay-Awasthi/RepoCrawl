@@ -1,5 +1,5 @@
 """
-RepoLens FastAPI application entrypoint.
+RepoCrawl FastAPI application entrypoint.
 
 Phase 1 wires up: app creation, CORS, structured error handling, logging,
 and the health endpoint. Repository indexing and chat endpoints are added
@@ -12,7 +12,7 @@ from fastapi.responses import JSONResponse
 
 from app.api.routes import health
 from app.core.config import get_settings
-from app.core.exceptions import RepoLensError
+from app.core.exceptions import RepoCrawlError
 from app.core.logging import configure_logging, get_logger
 from app.models.responses import ErrorDetail, ErrorResponse
 
@@ -43,10 +43,10 @@ def on_startup() -> None:
     logger.info("%s starting up (environment=%s)", settings.app_name, settings.environment)
 
 
-@app.exception_handler(RepoLensError)
-def handle_repolens_error(request: Request, exc: RepoLensError) -> JSONResponse:
+@app.exception_handler(RepoCrawlError)
+def handle_repocrawl_error(request: Request, exc: RepoCrawlError) -> JSONResponse:
     """Translate known application errors into a structured JSON error envelope."""
-    logger.warning("RepoLensError [%s] on %s: %s", exc.code, request.url.path, exc.message)
+    logger.warning("RepoCrawlError [%s] on %s: %s", exc.code, request.url.path, exc.message)
     payload = ErrorResponse(
         error=ErrorDetail(code=exc.code, message=exc.message, context=exc.context)
     )

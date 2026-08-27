@@ -7,7 +7,7 @@ handler in main.py translate them into the structured ErrorResponse shape.
 """
 
 
-class RepoLensError(Exception):
+class RepoCrawlError(Exception):
     """Base class for all application-level errors."""
 
     code: str = "internal_error"
@@ -19,31 +19,31 @@ class RepoLensError(Exception):
         self.context = context
 
 
-class InvalidRepositoryURLError(RepoLensError):
+class InvalidRepositoryURLError(RepoCrawlError):
     code = "invalid_repository_url"
     status_code = 400
 
 
-class RepositoryCloneError(RepoLensError):
+class RepositoryCloneError(RepoCrawlError):
     code = "repository_clone_failed"
     status_code = 502
 
 
-class EmptyRepositoryError(RepoLensError):
+class EmptyRepositoryError(RepoCrawlError):
     code = "empty_repository"
     status_code = 422
 
 
-class IndexingError(RepoLensError):
+class IndexingError(RepoCrawlError):
     code = "indexing_failed"
     status_code = 500
 
 
-class NoRepositoryIndexedError(RepoLensError):
+class NoRepositoryIndexedError(RepoCrawlError):
     code = "no_repository_indexed"
     status_code = 409
 
 
-class GenerationError(RepoLensError):
+class GenerationError(RepoCrawlError):
     code = "generation_failed"
     status_code = 502

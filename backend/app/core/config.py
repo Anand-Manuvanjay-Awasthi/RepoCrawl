@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     )
 
     # --- General ---
-    app_name: str = "RepoLens"
+    app_name: str = "RepoCrawl"
     environment: str = "development"
     log_level: str = "INFO"
 

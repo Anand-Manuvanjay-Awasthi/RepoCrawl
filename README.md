@@ -1,6 +1,6 @@
-# RepoLens
+# RepoCrawl
 
-RepoLens lets you point at a public GitHub repository and ask natural-language
+RepoCrawl lets you point at a public GitHub repository and ask natural-language
 questions about the codebase. It answers using Retrieval-Augmented Generation
 (RAG): relevant code is retrieved from the indexed repository first, and the
 answer is generated only from that retrieved evidence — never invented.
@@ -21,7 +21,7 @@ react-syntax-highlighter.
 ## Project Structure
 
 ```
-RepoLens/
+RepoCrawl/
 ├── backend/     # FastAPI application (RAG pipeline, indexing, chat API)
 └── frontend/    # React + Vite single-page app
 ```
@@ -30,7 +30,8 @@ RepoLens/
 
 - [x] Phase 1 — Project foundation (backend skeleton, config, health check,
       frontend skeleton)
-- [ ] Phase 2 — Repository ingestion (cloning, loading, filtering)
+- [x] Phase 2 — Repository ingestion (URL validation, metadata lookup,
+      cloning, loading, filtering)
 - [ ] Phase 3 — Indexing pipeline (chunking, embeddings, ChromaDB)
 - [ ] Phase 4 — Repository intelligence (tech stack, repo map, suggestions)
 - [ ] Phase 5 — Retrieval + intent classification
